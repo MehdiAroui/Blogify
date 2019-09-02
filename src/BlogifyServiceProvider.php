@@ -1,8 +1,9 @@
 <?php
 
-namespace Arweb\Blogify;
+namespace Blogify;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\Route;
 
 class BlogifyServiceProvider extends ServiceProvider{
 
@@ -13,6 +14,9 @@ class BlogifyServiceProvider extends ServiceProvider{
     */
 	public function register(){
 
+        $this->mergeConfigFrom(
+            __DIR__.'/../config/blogify.php', 'blogify'
+        );
 	}
 
 
@@ -51,8 +55,8 @@ class BlogifyServiceProvider extends ServiceProvider{
         return [
             'domain' => config('blogify.domain', null),
             'prefix' => config('blogify.path'),
-            'namespace' => 'Arweb\Blogify\Http\Controllers',
-            'middleware' => 'blogify',
+            'namespace' => 'Blogify\Http\Controllers',
+            //'middleware' => 'blogify',
         ];
     }
 
@@ -64,7 +68,7 @@ class BlogifyServiceProvider extends ServiceProvider{
      */
     private function registerPublishing()
     {
-        if ($this->app->runningInConsole()) {
+        // if ($this->app->runningInConsole()) {
             $this->publishes([
                 __DIR__.'/Database/migrations' => database_path('migrations'),
             ], 'blogify-migrations');
@@ -74,7 +78,7 @@ class BlogifyServiceProvider extends ServiceProvider{
             $this->publishes([
                 __DIR__.'/../config/blogify.php' => config_path('blogify.php'),
             ], 'blogify-config');
-        }
+        // }
     }
 
 

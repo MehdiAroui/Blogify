@@ -1,5 +1,5 @@
 export default [
-    { path: '/', redirect: '/requests' },
+    { path: '/', redirect: '/blog' },
 
     {
         path: '/blog/:id',
@@ -12,17 +12,4 @@ export default [
         name: 'blog',
         component: require('./screens/blog/index').default,
     },
-
-
-    /*{
-        path: '/logs/:id',
-        name: 'log-preview',
-        component: require('./screens/logs/preview').default,
-    },
-
-    {
-        path: '/logs',
-        name: 'logs',
-        component: require('./screens/logs/index').default,
-    },*/
 ];

@@ -1,6 +1,9 @@
 <?php
 
-use Illimunate\Routing\Controller;
+namespace Blogify\Http\Controllers;
+
+
+use Illuminate\Routing\Controller;
 
 class HomeController extends Controller{
 

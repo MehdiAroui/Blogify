@@ -40296,11 +40296,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! vue-router */ "./node_modules/vue-router/dist/vue-router.esm.js");
 /* harmony import */ var moment_timezone__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! moment-timezone */ "./node_modules/moment-timezone/index.js");
 /* harmony import */ var moment_timezone__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(moment_timezone__WEBPACK_IMPORTED_MODULE_4__);
- // import Base from './base';
 
 
 
- // import VueJsonPretty from 'vue-json-pretty';
 
 
 
@@ -40313,8 +40311,7 @@ if (token) {
 }
 
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_router__WEBPACK_IMPORTED_MODULE_3__["default"]);
-window.Popper = __webpack_require__(/*! popper.js */ "./node_modules/popper.js/dist/esm/popper.js")["default"]; //moment.tz.setDefault(Telescope.timezone);
-
+window.Popper = __webpack_require__(/*! popper.js */ "./node_modules/popper.js/dist/esm/popper.js")["default"];
 window.Blogify.basePath = '/' + window.Blogify.path;
 var routerBasePath = window.Blogify.basePath + '/';
 
@@ -40327,13 +40324,7 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_3__["default"]({
   routes: _routes__WEBPACK_IMPORTED_MODULE_2__["default"],
   mode: 'history',
   base: routerBasePath
-}); // Vue.component('vue-json-pretty', VueJsonPretty);
-// Vue.component('related-entries', require('./components/RelatedEntries.vue').default);
-// Vue.component('index-screen', require('./components/IndexScreen.vue').default);
-// Vue.component('preview-screen', require('./components/PreviewScreen.vue').default);
-// Vue.component('alert', require('./components/Alert.vue').default);
-// Vue.mixin(Base);
-
+});
 new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
   el: '#blogify',
   router: router,
@@ -40349,17 +40340,7 @@ new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
       autoLoadsNewEntries: localStorage.autoLoadsNewEntries === '1'
     };
   },
-  methods: {
-    autoLoadNewEntries: function autoLoadNewEntries() {
-      if (!this.autoLoadsNewEntries) {
-        this.autoLoadsNewEntries = true;
-        localStorage.autoLoadsNewEntries = 1;
-      } else {
-        this.autoLoadsNewEntries = false;
-        localStorage.autoLoadsNewEntries = 0;
-      }
-    }
-  }
+  methods: {}
 });
 
 /***/ }),
@@ -40375,7 +40356,7 @@ new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ([{
   path: '/',
-  redirect: '/requests'
+  redirect: '/blog'
 }, {
   path: '/blog/:id',
   name: 'blog-preview',

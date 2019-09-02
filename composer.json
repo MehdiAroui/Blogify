@@ -17,13 +17,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Arweb\\blogify\\": "src/"
+            "Blogify\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Arweb\\blogify\\BlogifyServiceProvider"
+                "Blogify\\BlogifyServiceProvider"
             ]
         }
     }
