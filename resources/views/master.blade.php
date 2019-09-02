@@ -11,6 +11,7 @@
     <link href="{{ asset(mix($cssFile, 'vendor/blogify')) }}" rel="stylesheet" type="text/css">
 </head>
 <body>
+	
 	<div id="blogify">
 		<header id="header">
 
@@ -24,6 +25,11 @@
 			<router-view></router-view>
 		</section>
 	</div>
+
+	<!-- Global Blogify Object -->
+<script>
+    window.Blogify = @json($blogifyJsVariables);
+</script>
 	
 <script src="{{asset(mix('app.js', 'vendor/blogify'))}}"></script>
 </body>
