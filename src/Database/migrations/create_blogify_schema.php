@@ -4,14 +4,15 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateBlogifySchema extends Migration {
-
-	/**
+class CreateBlogifySchema extends Migration
+{
+    /**
      * The database schema.
      *
      * @var Schema
      */
     protected $schema;
+
     /**
      * Create a new migration instance.
      *
@@ -24,10 +25,9 @@ class CreateBlogifySchema extends Migration {
         );
     }
 
-
-    public function up(){
-    	$this->schema->create('blogify_posts', function (Blueprint $table) {
-
+    public function up()
+    {
+        $this->schema->create('blogify_posts', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->text('title');
             $table->text('slug');
@@ -38,9 +38,7 @@ class CreateBlogifySchema extends Migration {
             $table->boolean('enable_comment')->default(true);
             $table->integer('comment_count');
             $table->date('publish_date');
-            
         });
-
 
         $this->schema->create('blogify_categories', function (Blueprint $table) {
             $table->bigIncrements('id');
@@ -48,7 +46,6 @@ class CreateBlogifySchema extends Migration {
             $table->string('label');
             $table->integer('parent_id')->unsaigned()->nullable();
         });
-
 
         $this->schema->create('blogify_comments', function (Blueprint $table) {
             $table->bigIncrements('id');
@@ -58,12 +55,10 @@ class CreateBlogifySchema extends Migration {
             $table->boolean('active')->default(true);
             $table->integer('post_id')->unsaigned();
         });
-
-        
     }
 
-
-    public function dowm(){
-    	$this->schema->dropIfExists('blogify_posts');
+    public function dowm()
+    {
+        $this->schema->dropIfExists('blogify_posts');
     }
 }
