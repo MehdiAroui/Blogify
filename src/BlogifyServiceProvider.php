@@ -39,6 +39,8 @@ class BlogifyServiceProvider extends ServiceProvider
         $this->loadViewsFrom(
             __DIR__.'/../resources/views', 'blogify'
         );
+
+        $this->loadMigrationsFrom(__DIR__.'/Database/migrations');
     }
 
     /**

@@ -18,12 +18,12 @@ class CreateBlogifySchema extends Migration
      *
      * @return void
      */
-    public function __construct()
-    {
-        $this->schema = Schema::connection(
-            config('blogify.storage.database.connection')
-        );
-    }
+//    public function __construct()
+//    {
+//        $this->schema = Schema::connection(
+//            config('blogify.storage.database.connection')
+//        );
+//    }
 
     public function up()
     {
@@ -38,6 +38,7 @@ class CreateBlogifySchema extends Migration
             $table->boolean('enable_comment')->default(true);
             $table->integer('comment_count');
             $table->date('publish_date');
+            $table->timestamps();
         });
 
         $this->schema->create('blogify_categories', function (Blueprint $table) {

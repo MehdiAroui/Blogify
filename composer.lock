@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "225007752e49459cea2c65e7ed551f39",
+    "content-hash": "7a3de65486a0ce45b296651a65f0ecc5",
     "packages": [
         {
             "name": "doctrine/inflector",
@@ -295,12 +295,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "6d9bb1751a26e3ea4eafabfc77bc7e83636cf258"
+                "reference": "d8e8171f6217c59d3ae1c90882baa2a4e21d06ec"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/6d9bb1751a26e3ea4eafabfc77bc7e83636cf258",
-                "reference": "6d9bb1751a26e3ea4eafabfc77bc7e83636cf258",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/d8e8171f6217c59d3ae1c90882baa2a4e21d06ec",
+                "reference": "d8e8171f6217c59d3ae1c90882baa2a4e21d06ec",
                 "shasum": ""
             },
             "require": {
@@ -432,7 +432,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2019-09-03T19:41:15+00:00"
+            "time": "2019-09-04T12:55:53+00:00"
         },
         {
             "name": "league/flysystem",
@@ -4400,7 +4400,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "mockery/mockery": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

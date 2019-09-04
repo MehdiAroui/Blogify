@@ -24,7 +24,7 @@ return [
     | affect the paths of its internal API that aren't exposed to users.
     |
     */
-    'path' => env('BLOGIFY_PATH', 'blog'),
+    'path' => env('BLOGIFY_PATH', 'blogify'),
 
     /*
     |--------------------------------------------------------------------------
