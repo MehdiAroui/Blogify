@@ -14,5 +14,4 @@ class BlogifyTest extends TestCase
 	{
 		$this->assertTrue(true);
 	}
-
 }
