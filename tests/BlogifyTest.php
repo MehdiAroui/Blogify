@@ -6,7 +6,6 @@ use Orchestra\Testbench\TestCase;
 
 class BlogifyTest extends TestCase
 {
-
 	/**
 	* @test
 	*/
