@@ -1,2 +1,7 @@
-/vendor/
-/node_modules/
+/node_modules
+/vendor
+/.idea
+composer.lock
+npm-debug.log
+.DS_Store
+.phpunit.result.cache
