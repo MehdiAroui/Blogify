@@ -2,7 +2,7 @@
 
 use Faker\Generator as Faker;
 
-$factory->define(\Blogify\Post::class, function (Faker $faker){
+$factory->define(\Blogify\Post::class, function (Faker $faker) {
     return [
         'title' => $faker->title,
         'slug' => $faker->unique()->slug,
