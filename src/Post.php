@@ -2,9 +2,9 @@
 
 namespace Blogify;
 
-use Illimunate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
 {
-	ptotected $table = 'blogify_posts';
+	protected $table = 'blogify_posts';
 }

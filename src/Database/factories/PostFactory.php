@@ -1,13 +1,12 @@
 <?php
 
-use Blogify\Post;
 use Faker\Generator as Faker;
 
-$factory->define(Post::class, function (Faker $faker){
+$factory->define(\Blogify\Post::class, function (Faker $faker){
     return [
         'title' => $faker->title,
         'slug' => $faker->unique()->slug,
-        'content' => $faker->paragraphs(3),
+        'content' => $faker->paragraph,
         'excerpt' => $faker->paragraph,
         'status' => $faker->word,
         'like_count' => $faker->randomNumber(2),

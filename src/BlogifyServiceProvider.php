@@ -54,7 +54,6 @@ class BlogifyServiceProvider extends ServiceProvider
             'domain' => config('blogify.domain', null),
             'prefix' => config('blogify.path'),
             'namespace' => 'Blogify\Http\Controllers',
-            //'middleware' => 'blogify',
         ];
     }
 
@@ -65,7 +64,6 @@ class BlogifyServiceProvider extends ServiceProvider
      */
     private function registerPublishing()
     {
-        // if ($this->app->runningInConsole()) {
         $this->publishes([
                 __DIR__.'/Database/migrations' => database_path('migrations'),
             ], 'blogify-migrations');
@@ -75,6 +73,5 @@ class BlogifyServiceProvider extends ServiceProvider
         $this->publishes([
                 __DIR__.'/../config/blogify.php' => config_path('blogify.php'),
             ], 'blogify-config');
-        // }
     }
 }

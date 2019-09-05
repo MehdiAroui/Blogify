@@ -18,12 +18,12 @@ class CreateBlogifySchema extends Migration
      *
      * @return void
      */
-//    public function __construct()
-//    {
-//        $this->schema = Schema::connection(
-//            config('blogify.storage.database.connection')
-//        );
-//    }
+   public function __construct()
+   {
+       $this->schema = Schema::connection(
+           config('blogify.storage.database.connection')
+       );
+   }
 
     public function up()
     {
