@@ -65,13 +65,13 @@ class BlogifyServiceProvider extends ServiceProvider
     private function registerPublishing()
     {
         $this->publishes([
-                __DIR__.'/Database/migrations' => database_path('migrations'),
-            ], 'blogify-migrations');
+            __DIR__.'/Database/migrations' => database_path('migrations'),
+        ], 'blogify-migrations');
         $this->publishes([
-                __DIR__.'/../public' => public_path('vendor/blogify'),
-            ], 'blogify-assets');
+            __DIR__.'/../public' => public_path('vendor/blogify'),
+        ], 'blogify-assets');
         $this->publishes([
-                __DIR__.'/../config/blogify.php' => config_path('blogify.php'),
-            ], 'blogify-config');
+            __DIR__.'/../config/blogify.php' => config_path('blogify.php'),
+        ], 'blogify-config');
     }
 }
