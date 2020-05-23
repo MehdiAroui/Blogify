@@ -2,9 +2,9 @@
 
 namespace Blogify\Tests;
 
-use Orchestra\Testbench\TestCase;
 use Blogify\BlogifyServiceProvider;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Orchestra\Testbench\TestCase;
 
 class BlogifyTestBase extends TestCase
 {
