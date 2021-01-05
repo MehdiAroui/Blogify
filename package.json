@@ -11,7 +11,7 @@
     },
     "devDependencies": {
         "@editorjs/editorjs": "^2.15.0",
-        "axios": "^0.19.0",
+        "axios": "^0.21.1",
         "bootstrap": "^4.3.1",
         "cross-env": "^5.1",
         "jquery": "^3.5.0",
